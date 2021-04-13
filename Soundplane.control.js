@@ -4,7 +4,7 @@ loadAPI(10);
 // This is useful during development.
 host.setShouldFailOnDeprecatedUse(true);
 
-host.defineController("Madrona Labs", "Soundplane", "0.1", "29d86405-bd65-4840-aaca-61b0a4e290e8", "mattly");
+host.defineController("Madrona Labs", "Soundplane", "0.2", "29d86405-bd65-4840-aaca-61b0a4e290e8", "mattly");
 
 host.defineMidiPorts(1, 0);
 
@@ -31,7 +31,7 @@ function init() {
   host.getMidiInPort(0).setMidiCallback(onMidi);
 
   generic = host.getMidiInPort(0).createNoteInput("", "??????")
-  generic.setUseExpressiveMidi(true, 0, 48)
+  generic.setUseExpressiveMidi(true, 0, 24)
   generic.setShouldConsumeEvents(false)
 
    // TODO: Perform further initialization here.
